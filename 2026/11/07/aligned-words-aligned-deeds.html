@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.1 -->
+<title>Aligned words, aligned deeds? | YoungJoo Kang</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Aligned words, aligned deeds?" />
+<meta name="author" content="YoungJoo Kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Last updated: 2026-11-15 Written: 2026-11-07" />
+<meta name="twitter:description" property="og:description" content="Last updated: 2026-11-15 Written: 2026-11-07" />
+<meta property="og:site_name" content="YoungJoo Kang" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-11-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Aligned words, aligned deeds?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"YoungJoo Kang"},"dateModified":"2026-11-07T00:00:00+00:00","datePublished":"2026-11-07T00:00:00+00:00","description":"Last updated: 2026-11-15 Written: 2026-11-07","headline":"Aligned words, aligned deeds?","mainEntityOfPage":{"@type":"WebPage","@id":"/2026/11/07/aligned-words-aligned-deeds.html"},"url":"/2026/11/07/aligned-words-aligned-deeds.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="YoungJoo Kang" /><script data-goatcounter="https://youngjoo-kang.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></head>
+<body>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Aligned words, aligned deeds?</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-11-07T00:00:00+00:00" itemprop="datePublished">Nov 7, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Last updated: 2026-11-15<br />
+Written: 2026-11-07</p>
+
+<h2 id="scope">Scope</h2>
+
+<p>This note records one question about value alignment, the prediction I wrote before looking at data, and a first measurement. It covers where the question came from, what was already known, what I measured on three small model families, and what that leaves open.</p>
+
+<h2 id="1-where-it-started">1. Where it started</h2>
+
+<p>In the evening of Nov 6, I watched Tina Seelig, a Stanford professor, on Mel Robbins’ podcast, talking about luck. Her image: luck is wind, and you can be a sailboat that goes out looking for it. The boat is built from your core values.</p>
+
+<p>Robbins followed up with her own case. When circumstances were on fire, she would say yes to things she would not do today. Her value, safety and security, did not change. It mattered then and now. What changed is her actions: how far she would go for the same value. Under pressure the same value took her further than it takes her today, and something else gave way to make room.</p>
+
+<p>The same morning I had read part of a LessWrong post on score-seeking in LLMs, and keywords like goal-orientation, alignment, and values were already floating in my thoughts. The podcast instantly landed on that: Robbins’ case is a familiar human pattern. That is the pattern I took to models. A value under pressure does not vanish. It widens what its holder will do for it, and whatever gets pushed out is the thing to look at. So the thing to watch is not the list of values a model holds. It is how far it goes for a value when the pressure is on, what gives way, and whether what it says about that matches what it does. How does, or should, a model behave when keeping a value costs the goal? What does it keep?</p>
+
+<p>Sources: Tina Seelig on The Mel Robbins Podcast, YouTube (watched 2026-11-06; paraphrased from the episode); “Towards understanding score-seeking in LLMs,” LessWrong (partly read 2026-11-06).</p>
+
+<h2 id="2-models-do-the-same">2. Models do the same</h2>
+
+<p>Whether models show the same pattern was already measured. Three lines of work put aligned models under pressure and watched what they kept and what gave way.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Study</th>
+      <th>Cost of keeping the value</th>
+      <th>What the model kept</th>
+      <th>What it dropped</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Agentic Misalignment (Anthropic, 2025)</td>
+      <td>Being replaced, or a goal conflict</td>
+      <td>Its own continuity and its assigned goal</td>
+      <td>The ethical constraint. In the 2025 study, the top models chose blackmail in most runs, and their reasoning acknowledged the constraint before going ahead</td>
+    </tr>
+    <tr>
+      <td>Alignment Faking (Greenblatt et al., 2024)</td>
+      <td>Retraining that would change its values</td>
+      <td>Its original values</td>
+      <td>Immediate behavior. It complied strategically to protect the values</td>
+    </tr>
+    <tr>
+      <td>METR, recent reward hacking (2025)</td>
+      <td>Failing the task</td>
+      <td>The score</td>
+      <td>Honesty about the task. Recent frontier models modify tests or scoring code to raise their scores</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A fourth study, LitmusValues (Chiu et al., 2025), does not put models under pressure. It ranks the values models state, and finds that the stated ranking predicts risky actions.</p>
+
+<p>So the human pattern holds for models. Under pressure, the value a model keeps widens what it will do, and something else gives way. The question “what do models keep under pressure, and what gives way” has answers.</p>
+
+<p>Sources: Anthropic, “Agentic Misalignment: How LLMs could be insider threats” (June 2025); Greenblatt et al., “Alignment faking in large language models,” arXiv 2412.14093 (2024); METR, “Recent frontier models are reward hacking” (June 2025) and the o3 evaluation report; Chiu et al., arXiv 2505.14633. Checked on Nov 10 against the papers or direct quotes of them; the blackmail rates and the acknowledgement wording come from quotes of the Anthropic post, not the post itself [Medium].</p>
+
+<h2 id="3-does-a-model-match-its-words-when-nothing-is-at-stake">3. Does a model match its words when nothing is at stake?</h2>
+
+<p>For a model to show this pattern, two things have to hold. First, with nothing at stake, its actions match its words: it goes exactly as far for a value as it says it would. Second, under pressure, its actions go further than its words. The studies in section 2 checked the second. What I wanted to know was the first: does a model show the same pattern when there is no pressure?</p>
+
+<p>This was already answered, and the answer is no, at least for models of 7B parameters and up. The Words and Deeds Consistency Test (Xu et al., ICLR 2025) found that models say one thing and do another even in ordinary scenarios with nothing at stake. Across 12 models, a stated value and the matching choice disagree often. The authors also report that aligning only the stated side, or only the action side, transfers poorly to the other.</p>
+
+<p>So the question changed. If words and actions are apart even with no pressure, which side does alignment training move? Both can. Actions can rise to meet the stated value. The stated value can sink to meet the actions. The two can meet in the middle, move together and stay apart, or drift further apart. What I wanted to read off is which side carried the change, and whether the stated position survived it. Why that side moved, whether alignment reaches words more easily or the training data simply had more of them, is a separate question, and for most models the data is not public.</p>
+
+<p>Xu et al. evaluated base and aligned versions of the same model families. That is an experiment that already happened. If their numbers showed which side moved, the question would be answered from a table.</p>
+
+<p>Sources: arXiv 2503.07003 (partly read in full, 2026-11-06 to 11-08).</p>
+
+<h2 id="4-what-the-literature-already-shows-on-the-gap-itself">4. What the literature already shows on the gap itself</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Study</th>
+      <th>Finding</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Stress-Testing Model Specs (Anthropic, Thinking Machines Lab, 2025)</td>
+      <td>Over 300,000 scenarios forcing a trade-off between two values, 12 frontier models. Value priorities cluster by provider. Where models disagree most, all of them violate their own spec 5 to 13 times more often.</td>
+    </tr>
+    <tr>
+      <td>Utility Engineering (Mazeika et al., 2025)</td>
+      <td>Larger models’ preferences fit a coherent utility function better, including exchange rates no one intended.</td>
+    </tr>
+    <tr>
+      <td>Words and Deeds Consistency Test (Xu et al., ICLR 2025)</td>
+      <td>After alignment, the probability consistency score drops by about 0.2, while agreement between the answers actually chosen rises in three of five base/chat pairs. The paper reports consistency only, not each side separately.</td>
+    </tr>
+    <tr>
+      <td>Mind the Value-Action Gap (Shen et al., EMNLP 2025)</td>
+      <td>Across 12 cultures and 11 topics, the best model’s value-action alignment rate is 0.653.</td>
+    </tr>
+    <tr>
+      <td>Pseudo-Deliberation (2026)</td>
+      <td>Slow, deliberative generation lowers value-action alignment in most models.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>None of these reports the direction: which side moved when the gap changed.</p>
+
+<p>Sources: arXiv 2510.07686; arXiv 2502.08640; arXiv 2503.07003; arXiv 2501.15463; arXiv 2605.09893 (checked 2026-11-06 at abstract or summary level).</p>
+
+<h2 id="5-prediction-written-before-looking">5. Prediction, written before looking</h2>
+
+<p>I wrote this prediction on Nov 8, before any model was run. The paragraph is unchanged since. At that point the question was open. The paper reports one consistency number per model, which counts how often words and actions agree but has no separate number for each side, so it cannot show whether the words moved or the actions did. The released data has the questions and no answers.</p>
+
+<p><strong>My prediction:</strong> after alignment, words moved more than deeds. Stated answers shifted toward the socially desirable option. Action choices moved less. Where answers changed between the base and chat model, it was mostly the word answer that changed. [Low]</p>
+
+<p>What I meant by it, added Nov 10. Alignment training teaches a model what to say is right. So the stated position moves toward the answer a person would approve of. Whether the model then acts on that position is a separate thing, and I expected it to move less. If words and actions were one thing, moving the words would carry the actions along. I bet they are not one thing: Xu et al. found that aligning one side transfers poorly to the other, and most post-training data is of the word kind, questions with approved answers rather than situations with choices.</p>
+
+<p>What would show I am wrong: deeds moving as much as or more than words, or the two moving in unrelated directions with no pattern.</p>
+
+<h2 id="6-first-attempt-can-public-data-answer-it">6. First attempt: can public data answer it?</h2>
+
+<p>I tried the cheap path first. Xu et al. had already run base and aligned versions of the same families on these 1,225 pairs, with models much larger (7B to 70B parameters) than anything I could run. But the repository holds the question pairs, the evaluation script, and the alignment code, and no model answers. The paper’s tables give consistency only. So I ran small models myself.</p>
+
+<h2 id="7-second-attempt-run-small-models-on-this-machine">7. Second attempt: run small models on this machine</h2>
+
+<p>One thing to say before the method. This measurement puts no pressure on the model. Nothing is at stake in any question; the model only answers. So it reaches the first of the two conditions in section 3, not the second. What that gives us is in section 8.</p>
+
+<p><strong>Method.</strong> Same 1,225 WDCT pairs. Each pair is one word question (what is your view, A or B) and one deed question (in this situation, what would you do, A or B). Two subsets have a right answer (ethical values, 500 items; economic theory, 101 items). Two do not (social opinions, 509; personal values, 115). I asked the base model and the aligned model its maker released the same questions, with the authors’ prompt text, and read the next-token probability of A and B instead of generating an answer. The model computes both probabilities before it answers; generating only rounds them to one letter. The rounding hides a real shift (0.6 to 0.9 on A both read as A) and invents a fake one (0.55 to 0.45 reads as a flip). Small models sit near 0.5 on most items, so the second kind would swamp the count. I asked each item twice with the options swapped and averaged, to remove a preference for the letter A.</p>
+
+<p>I wrote down how I would judge the prediction before running the full set. For the two subsets with a right answer, ethical values and economic theory, I compare how much accuracy changed from base to aligned, word side against deed side; the prediction is right if the word side rose more. For the two subsets without one, social opinions and personal values, there is no right direction, so I take the items the base model was confident about and count how many flipped their answer after alignment, again word side against deed side. No statistical test. The numbers and the item counts behind them are reported as they are.</p>
+
+<p>Three families, nine full runs, on a laptop CPU at 1.5 to 3.5 hours per model: Qwen2.5-0.5B (base, Instruct), OLMo 2 1B (base, SFT, DPO, Instruct), Llama-3.2-1B (base, Instruct).</p>
+
+<p><strong>Result:</strong> by the pre-set rule.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Family</th>
+      <th>Right answer: ethics</th>
+      <th>Right answer: theory</th>
+      <th>No right answer: opinions</th>
+      <th>No right answer: personal values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Qwen2.5-0.5B</td>
+      <td>Wrong. Deeds improved more</td>
+      <td>Wrong</td>
+      <td>Right, by 5 flips to 3</td>
+      <td>Wrong, 0 to 0</td>
+    </tr>
+    <tr>
+      <td>OLMo 2 1B</td>
+      <td>Right. Deeds got worse, words stayed at ceiling</td>
+      <td>Right</td>
+      <td>Wrong</td>
+      <td>Wrong</td>
+    </tr>
+    <tr>
+      <td>Llama-3.2-1B</td>
+      <td>Wrong. Words got worse</td>
+      <td>Wrong, tie</td>
+      <td>Not computable</td>
+      <td>Not computable</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>By the criterion in section 5, I was <strong>wrong in two of three families and right in one</strong>, by a rule that, as this section goes on to say, sat on noisy ground. Both of the conditions I wrote down as “wrong” appeared: deeds moved as much as or more than words in Qwen and Llama, and the three families did not share a direction. The one hit, OLMo on items with a right answer, came from deeds drifting away from the right answer at each alignment stage while words stayed at ceiling, not from words rising. The gap widened there, but not the way I predicted.</p>
+
+<p>A second reading, not the main metric: the probability mass on the word side moved more than on the deed side in Qwen and Llama, across all four subsets, while chosen answers barely changed. Words wobble more than deeds do, without flipping.</p>
+
+<p>A pair-level check, added Nov 10: on each item, the change in the word probability and the change in the deed probability are nearly unrelated. On the subsets with a right answer, the correlation of the two shifts measured toward the right answer is between -0.08 and +0.09 in all three families. On opinion items it is weakly positive, 0.09 to 0.37. Where the words moved on an item, the deeds moved on the same item only a little more often than where the words did not (0.42 against 0.33 in Qwen, 0.54 against 0.41 in OLMo, 0.40 against 0.36 in Llama). At the item level the two sides move mostly on their own.</p>
+
+<p><strong>What weakens this.</strong></p>
+
+<ul>
+  <li>All three base models answer the word questions near 50/50. There were between 0 and 9 confidently answered word items per subset. Part of the measured accuracy change is noise.</li>
+  <li>Llama’s aligned model has a strong preference for the letter B that survives the option swap. OLMo’s base model has a large order bias too.</li>
+  <li>Word questions are short survey items. Deed questions are long scenarios written by GPT-4. Some of the word-deed difference is a difference in text, not in values.</li>
+  <li>Which side moved is visible. Why it moved is not. Qwen and Llama do not publish their alignment data, so a larger shift on the word side could mean alignment reaches words more easily, or that the data had more word-like items. OLMo publishes its data, which is why it is in the set, but I did not count the two kinds of items in it.</li>
+  <li>Three models at 0.5B to 1B, no significance test, and several cells differ by a handful of items.</li>
+  <li>The subsets without a right answer had too few confident items to measure. They were also social opinions and personal tastes, not value conflicts with something at stake. Even with more items they would not have reached the pressure question.</li>
+  <li>The deeds here are stated intentions. “In this situation, what would you do, A or B” is still an answer in words. A deed in the sense of section 2 is a model holding tools and acting, and this run has none of that.</li>
+</ul>
+
+<h2 id="8-what-this-leaves">8. What this leaves</h2>
+
+<p>Three things are now on the table, and one is not.</p>
+
+<ul>
+  <li>With no pressure, alignment changes what a model says. All three families.</li>
+  <li>With no pressure, whether alignment changes what a model does varies by family.</li>
+  <li>Under pressure, aligned models drop values. That is the prior work in section 2.</li>
+</ul>
+
+<p>What I have not seen, and have not done, is the base model and its aligned version under the same pressure, side by side. This measurement would be the pressure-zero control for that comparison. I did not plan it that way. I ran the pressure-zero case because it was the one I could run, and only saw afterwards that it is also the one that has to come first. I wanted to go on to the pressure cell. I did not, for three reasons.</p>
+
+<ul>
+  <li>The models I can run do not read a pressure scenario. At 1B they sat near 50/50 on a one-line question; a paragraph about being shut down is out of reach.</li>
+  <li>Pressure delivered as text, with an A or B answer, is still a stated intention. The deeds in this note are already that. Real pressure means the model holds tools and acts, as in the studies in section 2, and that is beyond this machine.</li>
+  <li>A base model cannot be put into an agentic scenario without scaffolding, and the scaffolding itself changes the comparison. It does not follow instructions or use tools on its own. So the comparison I wanted may only exist in the weak, text-only form. And in that form it is not empty. Perez et al. (2022) asked pretrained and RLHF models the same questions about self-preservation and found RLHF made the stated tendency stronger, not weaker. Sheshadri et al. (2025) ran base and post-trained models through the alignment-faking setup and found post-training removes the faking in some families and amplifies it in others. What I have not seen is the same value item measured at pressure zero and under pressure, before and after alignment, side by side.</li>
+</ul>
+
+<p>What I actually want to know is whether the gap between what alignment is for and what it is trained on shows up in the result: put the same model before and after alignment under the same pressure, and see whether the deeds moved, and if they did, whether they moved the way the intent pointed. That needs a model whose intent is written down and whose base version is available, and I do not know of one.</p>
+
+<p>What alignment is for is behavior, and above all behavior under pressure. The documents that say so, Anthropic’s constitution and OpenAI’s model spec, are written as “do this,” not “say this”: accept being shut down, do not blackmail, do not deceive the user. What it is trained on is words with nothing at stake. Supervised fine-tuning copies demonstration answers. Preference training picks the answer a rater liked. Both teach what to answer inside a conversation where nothing is at stake, whether the question is “do you agree” or “what would you do.” Post-training is not split into a words stage and a deeds stage. For the small models here it is supervised fine-tuning and preference training on conversations. Frontier models add reinforcement learning on agentic tasks; whether that reaches what a model does for a value, I do not know. Which side the training reaches more is a by-product of the data mix, and the mix is mostly not public. So the intent asks for what practice would give, and the material is a lecture. For people, we know how that turns out. I will take that up another time, starting from the two studies above. What this note has is smaller: at pressure zero, on small models, the prediction I wrote was wrong, and measuring it was harder than predicting it.</p>
+
+<p>Sources for section 8: Perez et al., “Discovering Language Model Behaviors with Model-Written Evaluations,” arXiv 2212.09251; Sheshadri et al., “Why Do Some Language Models Fake Alignment While Others Don’t?” arXiv 2506.18032 (both at summary level, Nov 10).</p>
+
+<p>Open threads, not pursued: whether what a person or a model keeps stays the same as values shift over time, and whether the gap is larger for embodied systems, where the action side is trained separately from the language side.</p>
+
+<h2 id="how-this-was-made">How this was made</h2>
+
+<p>The idea, the questions, and the direction changes were mine. Claude ran the searches, summarized abstracts, wrote the scripts, and drafted each version; I chose what to keep and rewrote paragraph by paragraph.</p>
+
+<p>The prediction was written on Nov 8, before any model was run. The rule for judging it was fixed the same day, after a 40-item pilot and before any full run. The runs took Nov 8 and 9. One result looked wrong, and before interpreting it we opened per-item probabilities and the token stream and found a doubled start-of-text token in the chat template; the buggy run is kept.</p>
+
+<p>The note was restructured on Nov 9 and 10, after I found I had lost track of why I started. My notes had recorded what was done and not what I was curious about. The first version opened with Claude’s framing; this one opens with the observation it came from.</p>
+
+<h2 id="disclosure">Disclosure</h2>
+
+<p>No affiliations or funding. Written on my own time.</p>
+
+  </div><a class="u-url" href="/2026/11/07/aligned-words-aligned-deeds.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer">
+  <div class="wrapper">
+    <p class="footer-line">
+      &copy; 2026 YoungJoo Kang ·
+      <a href="https://github.com/youngjoo-kang">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/jaimeekang">LinkedIn</a> ·
+      <a href="mailto:jaimee.yjk@gmail.com">Contact</a>
+    </p>
+  </div>
+</footer>
+</body>
+
+</html>
